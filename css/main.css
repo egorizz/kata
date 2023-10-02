@@ -11,9 +11,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #2a4a5c;
   background-color: #eff6ff;
-  font-family: "Barlow", sans-serif;
+  color: #2a4a5c;
+  font-family: Barlow, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -21,8 +21,8 @@ body {
 }
 
 ul {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -38,54 +38,54 @@ a {
 
 h1 {
   font-size: 38px;
-  line-height: 130%;
   font-weight: 600;
+  line-height: 130%;
 }
 
 h2 {
   font-size: 28px;
-  opacity: 0.5;
   font-weight: 500;
   line-height: 110%;
+  opacity: 0.5;
 }
 
 button {
-  border: 0;
-  padding: 0;
   margin: 0;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  padding: 0;
+  border: 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
   font-weight: 600;
   cursor: pointer;
 }
 
 .size {
-  max-width: 1640px;
   margin: 95px auto;
   padding: 0 20px;
+  max-width: 1640px;
 }
 
 .block {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   display: flex;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
-@media (max-width: 1400px) {
+@media (width <= 1400px) {
   .block {
     flex-wrap: wrap;
   }
 }
 
 .block__left {
-  background-image: url(../images/bg.jpg);
+  background-image: url("../images/bg.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   flex-grow: 1;
   width: 55%;
 }
-@media (max-width: 1400px) {
+@media (width <= 1400px) {
   .block__left {
-    width: 100%;
     height: 600px;
+    width: 100%;
   }
 }
 
@@ -93,18 +93,18 @@ button {
   padding-top: 40px;
   padding-left: 60px;
 }
-@media (max-width: 1400px) {
+@media (width <= 1400px) {
   .logo__img {
     padding: 40px 60px;
   }
 }
 
 .block__right {
-  background-color: #ffffff;
+  background-color: #fff;
   flex-grow: 1;
   width: 45%;
 }
-@media (max-width: 1400px) {
+@media (width <= 1400px) {
   .block__right {
     width: 100%;
   }
@@ -115,11 +115,11 @@ button {
 }
 
 .buttons {
+  margin: 55px 0;
   display: flex;
   gap: 50px;
-  margin: 55px 0;
 }
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .buttons {
     flex-wrap: wrap;
   }
@@ -131,14 +131,14 @@ button {
 }
 
 .flex {
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 20px;
   padding: 15px;
 }
 
 .flex__text {
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -148,34 +148,34 @@ button {
 }
 
 .separator {
-  max-width: 200px;
   margin: 0 auto;
+  font-weight: 600;
+  max-width: 200px;
   position: relative;
   text-align: center;
-  font-weight: 600;
 }
 .separator::before {
-  position: absolute;
   content: "";
-  width: 100px;
-  top: 7px;
-  left: -25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  top: 7px;
+  position: absolute;
+  width: 100px;
+  left: -25px;
 }
 .separator::after {
-  position: absolute;
   content: "";
-  width: 100px;
-  top: 7px;
-  right: -25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  top: 7px;
+  position: absolute;
+  width: 100px;
+  right: -25px;
 }
 
 .input {
   display: flex;
   gap: 50px;
 }
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .input {
     flex-wrap: wrap;
     gap: 10px;
@@ -183,14 +183,14 @@ button {
 }
 
 .field {
-  height: 70px;
-  width: 50%;
-  position: relative;
   margin: 55px 0;
-  border: 1px solid lightgray;
   background-color: #fff;
+  border: 1px solid lightgray;
+  height: 70px;
+  position: relative;
+  width: 50%;
 }
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .field {
     margin: 0;
     margin-top: 55px;
@@ -199,32 +199,28 @@ button {
 }
 
 .field input {
-  all: unset;
-  height: 100%;
-  width: 100%;
-  position: absolute;
   padding-left: 5px;
+  all: unset;
+  border-left: 1px solid rgba(0, 0, 0, 0);
   font-size: 20px;
   font-weight: 600;
+  height: 100%;
+  outline: none;
+  position: absolute;
+  width: 100%;
 }
 
 .field label {
-  position: absolute;
-  top: 0;
-  color: #96a5b1;
   padding-left: 5px;
+  color: #96a5b1;
   font-size: 16px;
   font-weight: 500;
-}
-
-.field input:focus {
-  outline: none;
+  position: absolute;
+  top: 0;
 }
 
 .field input:focus {
   border-left: 1px solid #3698fb;
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .second_text {
@@ -236,32 +232,44 @@ button {
 }
 
 .second_text__subtitle {
+  margin-bottom: 50px;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 50px;
 }
 
 .radio {
-  position: relative;
+  margin-bottom: 170px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 170px;
+  position: relative;
+}
+@media (width <= 768px) {
+  .radio {
+    flex-wrap: wrap;
+  }
 }
 
 .radio__button {
-  display: flex;
+  align-items: center;
+  display: inline-flex;
   gap: 10px;
-  align-items: stretch;
+  height: 100%;
+  justify-content: center;
 }
-
-.radio__button span {
-  font-size: 18px;
-  font-weight: 600;
+@media (width <= 768px) {
+  .radio__button {
+    margin-bottom: 10px;
+    flex-basis: 50%;
+    justify-content: flex-start;
+  }
 }
 
 .radio__button label {
-  position: relative;
   cursor: pointer;
+  display: inline-flex;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 input[type=radio] {
@@ -269,18 +277,18 @@ input[type=radio] {
   position: relative;
 }
 
-input[type=radio] + label:before {
+input[type=radio] + label::before {
   content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
   border: 2px solid #afafaf;
+  border-radius: 50%;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
 }
 
-input[type=radio]:checked + label:before {
-  border: 4px solid #3698fb;
+input[type=radio]:checked + label::before {
   background-color: transparent;
+  border: 4px solid #3698fb;
 }
 
 .information {
@@ -289,112 +297,92 @@ input[type=radio]:checked + label:before {
 }
 .information::after {
   content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
   border: 2px solid #afafaf;
-  top: 1px;
+  border-radius: 50%;
+  height: 15px;
+  position: absolute;
   right: -6px;
+  top: 1px;
+  width: 15px;
 }
 
-.information:hover + .information_open1 {
+.information:hover + .information_position1 {
   display: block;
 }
 
-.information_open1 {
-  padding: 15px;
-  width: 320px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.3;
-  background: #fff;
-  color: #7b8a92;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  display: none;
-  position: absolute;
-  top: 60px;
+.information_position1 {
   left: 0;
 }
 
-.information:hover + .information_open2 {
+.information:hover + .information_position2 {
   display: block;
 }
 
-.information_open2 {
-  padding: 15px;
-  width: 320px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.3;
-  background: #fff;
-  color: #7b8a92;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  display: none;
-  position: absolute;
-  top: 60px;
+.information_position2 {
   left: 200px;
 }
+@media (width <= 768px) {
+  .information_position2 {
+    left: 0;
+  }
+}
 
-.information:hover + .information_open3 {
+.information:hover + .information_position3 {
   display: block;
 }
 
-.information_open3 {
-  padding: 15px;
-  width: 320px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.3;
-  background: #fff;
-  color: #7b8a92;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  display: none;
-  position: absolute;
-  top: 60px;
+.information_position3 {
   right: 155px;
 }
+@media (width <= 768px) {
+  .information_position3 {
+    right: 0;
+  }
+}
 
-.information:hover + .information_open4 {
+.information:hover + .information_position4 {
   display: block;
 }
 
-.information_open4 {
+.information_position4 {
+  right: 0;
+}
+
+.information_open {
   padding: 15px;
-  width: 320px;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  color: #7b8a92;
+  display: none;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.3;
-  background: #fff;
-  color: #7b8a92;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  display: none;
   position: absolute;
   top: 60px;
-  right: 0;
+  width: 320px;
 }
 
 .checkbox__agree {
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .checkbox__agree span {
     display: block;
   }
 }
 
 .checkbox__agree-view {
-  text-decoration-line: underline;
   color: #3698fb;
+  text-decoration-line: underline;
 }
 
 .create {
   margin-top: 70px;
-  background-color: #3698fb;
-  width: 50%;
-  color: #ffffff;
-  font-size: 16px;
   padding: 20px 0;
+  background-color: #3698fb;
   border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  width: 50%;
 }/*# sourceMappingURL=main.css.map */
