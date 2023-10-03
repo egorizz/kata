@@ -36,28 +36,6 @@ a {
   color: inherit;
 }
 
-h1 {
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 130%;
-}
-
-h2 {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 110%;
-  opacity: 0.5;
-}
-
-button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-shadow: 0 0 20px 0 rgb(0 0 0 / 5%);
-  font-weight: 600;
-  cursor: pointer;
-}
-
 @mixin separator {
   content: "";
   border-bottom: 1px solid rgb(0 0 0 / 10%);
@@ -66,7 +44,7 @@ button {
   width: 100px;
 }
 
-.size {
+.main {
   margin: 95px auto;
   padding: 0 20px;
   max-width: 1640px;
@@ -80,6 +58,48 @@ button {
     flex-wrap: wrap;
   }
 }
+// ========== MODIFICATORS ========== //
+
+.text_opacity {
+  opacity: 0.5;
+}
+
+.text_weight_s {
+  font-weight: 400;
+}
+
+.text_weight_m {
+  font-weight: 500;
+}
+
+.text_weight_l {
+  font-weight: 600;
+}
+
+.display_fl {
+  display: flex;
+}
+
+.display_int {
+  display: initial;
+}
+
+.gap_s {
+  gap: 10px;
+  display: flex;
+}
+
+.gap_m {
+  gap: 20px;
+  display: flex;
+}
+
+.gap_l {
+  gap: 50px;
+  display: flex;
+}
+
+// ========== /MODIFICATORS ========== //
 
 .block__left {
   background-image: url("../images/bg.jpg");
@@ -114,18 +134,36 @@ button {
   }
 }
 
-.block__right-inner {
+.inner {
   padding: 100px 50px;
 }
 
-.buttons {
-  margin: 55px 0;
-  display: flex;
-  gap: 50px;
+.top-text__title {
+  font-size: 38px;
+  line-height: 130%;
+}
 
+.top-text__subtitle {
+  font-size: 28px;
+  line-height: 110%;
+}
+
+.buttons {
   @media (width <= 768px) {
     flex-wrap: wrap;
   }
+}
+
+.buttons__inner {
+  margin: 55px 0;
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 5%);
+  cursor: pointer;
 }
 
 .buttons__facebook {
@@ -133,14 +171,13 @@ button {
   width: 100%;
 }
 
-.flex {
+.button__flex {
   align-items: center;
-  display: flex;
   gap: 20px;
   padding: 15px;
 }
 
-.flex__text {
+.button__text {
   color: #fff;
   font-size: 16px;
 }
@@ -152,7 +189,6 @@ button {
 
 .separator {
   margin: 0 auto;
-  font-weight: 600;
   max-width: 200px;
   position: relative;
   text-align: center;
@@ -169,19 +205,16 @@ button {
 }
 
 .input {
-  display: flex;
-  gap: 50px;
-
   @media (width <= 768px) {
     flex-wrap: wrap;
     gap: 10px;
   }
 }
 
-.field {
+.input__field {
   margin: 55px 0;
   background-color: #fff;
-  border: 1px solid lightgray;
+  border: 1px solid rgb(0 0 0 / 10%);
   height: 70px;
   position: relative;
   width: 50%;
@@ -193,43 +226,42 @@ button {
   }
 }
 
-.field input {
-  padding-left: 5px;
+.input__item {
   all: unset;
-  border-left: 1px solid rgb(0 0 0 / 0%);
   font-size: 20px;
-  font-weight: 600;
   height: 100%;
-  outline: none;
   position: absolute;
   width: 100%;
 }
 
-.field label {
+.input__item[placeholder] {
+  padding: 0 5px;
+  font-weight: 600;
+}
+
+.input__label {
   padding-left: 5px;
   color: #96a5b1;
   font-size: 16px;
-  font-weight: 500;
   position: absolute;
   top: 0;
 }
 
-.field input:focus {
+.input__field .input__item:focus {
   border-left: 1px solid #3698fb;
 }
 
-.second_text {
+.second-text {
   margin-top: 70px;
 }
 
-.second_text__title {
+.second-text__title {
   font-size: 28px;
 }
 
-.second_text__subtitle {
+.second-text__subtitle {
   margin-bottom: 50px;
   font-size: 20px;
-  font-weight: 600;
 }
 
 .radio {
@@ -245,8 +277,6 @@ button {
 
 .radio__button {
   align-items: center;
-  display: inline-flex;
-  gap: 10px;
   height: 100%;
   justify-content: center;
   @media (width <= 768px) {
@@ -256,20 +286,18 @@ button {
   }
 }
 
-.radio__button label {
+.radio__label {
   cursor: pointer;
-  display: inline-flex;
-  gap: 10px;
   font-size: 18px;
   font-weight: 600;
 }
 
-input[type="radio"] {
+.radio__input[type="radio"] {
   display: none;
   position: relative;
 }
 
-input[type="radio"] + label::before {
+.radio__input[type="radio"] + .radio__label::before {
   content: "";
   border: 2px solid #afafaf;
   border-radius: 50%;
@@ -278,7 +306,7 @@ input[type="radio"] + label::before {
   width: 20px;
 }
 
-input[type="radio"]:checked + label::before {
+.radio__input[type="radio"]:checked + .radio__label::before {
   background-color: transparent;
   border: 4px solid #3698fb;
 }
@@ -346,18 +374,17 @@ input[type="radio"]:checked + label::before {
   color: #7b8a92;
   display: none;
   font-size: 18px;
-  font-weight: 400;
   line-height: 1.3;
   position: absolute;
   top: 60px;
   width: 320px;
 }
 
-.checkbox__agree {
+.checkbox__label {
   opacity: 0.8;
 }
 
-.checkbox__agree span {
+.checkbox__agree {
   @media (width <= 768px) {
     display: block;
   }
@@ -369,11 +396,14 @@ input[type="radio"]:checked + label::before {
 }
 
 .create {
-  margin-top: 70px;
-  padding: 20px 0;
   background-color: #3698fb;
   border-radius: 5px;
   color: #fff;
   font-size: 16px;
   width: 50%;
+}
+
+.inner__create {
+  margin-top: 70px;
+  padding: 20px 0;
 }

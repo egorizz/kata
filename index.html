@@ -13,131 +13,164 @@
     <title>Document</title>
   </head>
   <body>
-    <main class="size">
+    <main class="main">
       <div class="block">
         <div class="block__left">
           <a href="#" class="logo">
-            <img src="./images/logo.svg" alt="" class="logo__img"/>
+            <img src="./images/logo.svg" alt="" class="logo__img" />
           </a>
         </div>
         <div class="block__right">
-          <div class="block__right-inner">
-            <div class="top_text">
-              <h1>Get iintoo it today</h1>
-              <h2>There is no charge or obligation upon registration</h2>
+          <div class="inner">
+            <div class="top-text">
+              <h1 class="top-text__title text_weight_l">Get iintoo it today</h1>
+              <h2 class="top-text__subtitle text_opacity text_weight_m">
+                There is no charge or obligation upon registration
+              </h2>
             </div>
-            <div class="buttons">
-              <button class="buttons__facebook">
-                <div class="flex">
-                  <img src="./images/facebook.svg" alt="" class="flex__img" />
-                  <div class="flex__text">Register with Facebook</div>
+            <div class="buttons buttons__inner gap_l">
+              <button class="button buttons__facebook">
+                <div class="button__flex display_fl">
+                  <img src="./images/facebook.svg" alt="" class="button__img" />
+                  <div class="button__text text_weight_l">
+                    Register with Facebook
+                  </div>
                 </div>
               </button>
-              <button class="buttons__in">
-                <div class="flex">
-                  <img src="./images/linkedin.svg" alt="" class="flex__img" />
-                  <div class="flex__text">Register with Linkedin</div>
+              <button class="button buttons__in">
+                <div class="button__flex display_fl">
+                  <img src="./images/linkedin.svg" alt="" class="button__img" />
+                  <div class="button__text text_weight_l">
+                    Register with Linkedin
+                  </div>
                 </div>
               </button>
             </div>
-            <div class="separator">OR</div>
+            <div class="separator text_weight_l">OR</div>
             <form action="#">
-              <div class="input">
-                <div class="field">
-                  <input name="#"
+              <div class="input gap_l">
+                <div class="input__field">
+                  <input
+                    name="#"
                     type="email"
                     id="email"
                     placeholder="gus.goodwin@gmail.com"
                     required
+                    class="input__item text_weight_l"
                   />
-                  <label for="email">Email</label>
+                  <label for="email" class="input__label text_weight_m"
+                    >Email</label
+                  >
                   <div class="border"></div>
                 </div>
-                <div class="field">
-                  <input name="#" type="tel" id="phone" required />
-                  <label for="phone">Phone</label>
+                <div class="input__field">
+                  <input
+                    name="#"
+                    type="tel"
+                    id="phone"
+                    placeholder=""
+                    required
+                    class="input__item text_weight_l"
+                  />
+                  <label for="phone" class="input__label text_weight_m"
+                    >Phone</label
+                  >
                 </div>
               </div>
-              <div class="second_text">
-                <h1 class="second_text__title">
+              <div class="second-text">
+                <h1 class="second-text__title">
                   What type of investor are you?
                 </h1>
-                <h2 class="second_text__subtitle">
+                <h2 class="second-text__subtitle text_opacity text_weight_l">
                   Select the type of investor you are below.
                 </h2>
               </div>
               <div class="radio">
-                <div class="radio__button">
-                  <input name="#" type="radio" id="role_individual" name="button" />
-                  <label for="role_individual">
+                <div class="radio__button gap_s">
+                  <input
+                    name="#"
+                    type="radio"
+                    id="role_individual"
+                    name="button"
+                    class="radio__input"
+                  />
+                  <label for="role_individual" class="radio__label gap_s">
                     Individual
                   </label>
+                  <div class="information">i</div>
                   <div
-                    class="information"
+                    class="information_position1 information_open text_weight_s"
                   >
-                    i
-                  </div>
-                  <div class="information_position1 information_open">
                     I am natural person investing on my own behalf as a sole
                     owner, joint tenant, or tenant in common
                   </div>
                 </div>
-                <div class="radio__button">
-                  <input name="#" type="radio" id="role_business" name="button" />
-                  <label for="role_business">
+                <div class="radio__button gap_s">
+                  <input
+                    name="#"
+                    type="radio"
+                    id="role_business"
+                    name="button"
+                    class="radio__input"
+                  />
+                  <label for="role_business" class="radio__label gap_s">
                     Business
                   </label>
+                  <div class="information">i</div>
                   <div
-                    class="information"
+                    class="information_position2 information_open text_weight_s"
                   >
-                    i
-                  </div>
-                  <div class="information_position2 information_open">
                     I am natural person investing on my own behalf as a sole
                     owner, joint tenant, or tenant in common
                   </div>
                 </div>
-                <div class="radio__button">
-                  <input name="#" type="radio" id="role_ira" name="button" />
-                  <label for="role_ira">
-                    IRA
-                  </label>
+                <div class="radio__button gap_s">
+                  <input
+                    name="#"
+                    type="radio"
+                    id="role_ira"
+                    name="button"
+                    class="radio__input"
+                  />
+                  <label for="role_ira" class="radio__label gap_s"> IRA </label>
+                  <div class="information">i</div>
                   <div
-                    class="information"
+                    class="information_position3 information_open text_weight_s"
                   >
-                    i
-                  </div>
-                  <div class="information_position3 information_open">
                     I am natural person investing on my own behalf as a sole
                     owner, joint tenant, or tenant in common
                   </div>
                 </div>
-                <div class="radio__button">
-                  <input name="#" type="radio" id="role_trust" name="button" />
-                  <label for="role_trust">
+                <div class="radio__button gap_s">
+                  <input
+                    name="#"
+                    type="radio"
+                    id="role_trust"
+                    name="button"
+                    class="radio__input"
+                  />
+                  <label for="role_trust" class="radio__label gap_s">
                     Trust
                   </label>
+                  <div class="information">i</div>
                   <div
-                    class="information"
+                    class="information_position4 information_open text_weight_s"
                   >
-                    i
-                  </div>
-                  <div class="information_position4 information_open">
                     I am natural person investing on my own behalf as a sole
                     owner, joint tenant, or tenant in common
                   </div>
                 </div>
               </div>
               <div class="checkbox">
-                <input name="#" type="checkbox" class="checkbox__agreement" />
-                <label for="" class="checkbox__agree">
+                <input name="#" type="checkbox" class="checkbox__input" />
+                <label for="" class="checkbox__label">
                   I agree to the terms and recerving notifications from intoo
-                  <span>
+                  <span class="checkbox__agree">
                     <a href="#" class="checkbox__agree-view">View full terms</a>
                   </span>
                 </label>
               </div>
-              <button class="create">Create Account</button>
+              <button class="button create inner__create">Create Account</button>
             </form>
           </div>
         </div>
